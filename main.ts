@@ -300,13 +300,10 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (attacking) {
         return
     }
-
     attacking = true
-
     swordHitbox = sprites.create(img`
-        1
-    `, SpriteKind.Projectile)
-
+        1 
+        `, SpriteKind.Projectile)
     swordHitbox.setFlag(SpriteFlag.Invisible, true)
     if (Sword_recieved) {
         if (facing_left) {
@@ -1212,8 +1209,8 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSp
     pause(2000)
     otherSprite.setFlag(SpriteFlag.Ghost, false)
 })
-let attacking = false
 let swordHitbox: Sprite = null
+let attacking = false
 let door_unlocked = false
 let Keyfound = false
 let jumpcan = false
